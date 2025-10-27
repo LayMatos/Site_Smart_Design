@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Smart Design — Site institucional (React + TS + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto em React + TypeScript usando Vite, TailwindCSS e componentes shadcn/ui. Inclui rotas, tema, ícones e páginas institucionais (Home, Quem Somos, Projetos, Depoimentos, Contato), além de página de detalhes de projeto.
 
-Currently, two official plugins are available:
+## Stack
+- React 18 + TypeScript
+- Vite 5 (plugin react-swc)
+- TailwindCSS 3 + tailwind-animate + tokens HSL (shadcn/ui)
+- React Router v6
+- Radix UI (base dos componentes), lucide-react (ícones)
+- TanStack Query (infra pronta para dados)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Scripts
+- `npm run dev`: inicia o servidor em desenvolvimento
+- `npm run build`: build de produção
+- `npm run preview`: pré-visualização do build
+- `npm run lint`: lint dos arquivos
 
-## React Compiler
+## Executando localmente
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Rode em desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Acesse no navegador o endereço que o Vite indicar (por padrão http://localhost:8080).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estrutura principal
+- `src/components` — Navbar, Footer e componentes UI (shadcn/ui)
+- `src/pages` — páginas: `Home`, `QuemSomos`, `Projetos`, `ProjetoDetalhe`, `Depoimentos`, `Contato`, `NotFound`
+- `src/data/projects.ts` — base de projetos (slug, título, imagem, etc.)
+- `src/assets` — imagens e logotipos (logo do header e logotipo do favicon)
+- `index.html` — metatags e links de favicon
+- `tailwind.config.ts` — tokens de tema e plugins
+- `src/index.css` — variáveis HSL e camadas do Tailwind
+- `vite.config.ts` — alias `@` para `src` e plugin React SWC
 
-## Expanding the ESLint configuration
+## Rotas
+- `/` — Home
+- `/quem-somos` — Quem Somos
+- `/projetos` — Lista de Projetos
+- `/projetos/:slug` — Detalhe do Projeto
+- `/depoimentos` — Depoimentos
+- `/contato` — Contato
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Favicon e Logotipo
+- Header utiliza `src/assets/logo.png` (ajuste em `src/components/Navbar.tsx`).
+- Favicon utiliza `public/favicon.ico` (e `public/favicon.png`) com versionamento de cache em `index.html`.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Personalização rápida
+- Trocar cores: edite os tokens HSL em `src/index.css` (seção `:root`).
+- Tipografia/espacamentos: utilize as utilitárias do Tailwind diretamente nas páginas/componentes.
+- Ícones: importar de `lucide-react` e aplicar classes Tailwind.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Padrões de UI/UX aplicados
+- Navbar com foco, skip‑link e responsividade (menu mobile).
+- Animações suaves (hover/foco) em cards e botões.
+- Layout responsivo com containers centralizados.
+- Página de detalhes de projeto com fallback 404.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Build de produção
+```bash
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Licença
+Projeto privado para uso da Smart Design.
