@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Star, Layers, Cube, ShieldCheck, Clock, Handshake, PiggyBank, Quote } from "lucide-react";
+import { Star, Layers, ShieldCheck, Clock, Handshake, PiggyBank, Quote } from "lucide-react";
 import kitchenHero from "@/assets/kitchen-hero.jpg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -99,7 +99,7 @@ const Home = () => {
               </div>
               <div className="group bg-card rounded-lg shadow p-6 border transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:ring-1 hover:ring-primary/20">
                 <div className="w-12 h-12 rounded-full bg-secondary/30 text-primary flex items-center justify-center mb-3">
-                  <Cube className="h-6 w-6" />
+                  {/* <Cube className="h-6 w-6" /> */}
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">PROJETO 3D E ACOMPANHAMENTO</h3>
                 <p className="text-sm text-muted-foreground">
