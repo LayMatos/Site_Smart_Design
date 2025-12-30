@@ -17,18 +17,18 @@ const Projetos = () => {
   const valores = [
     {
       icon: Lightbulb,
-      title: "Inovação e Criatividade",
-      subtitle: "emite pqs pattraf.",
+      title: "Design Exclusivo e Inteligente",
+      subtitle: "Cada projeto é único. Criamos móveis planejados sob medida, com soluções sofisticadas que equilibram estética, funcionalidade e personalidade, respeitando o estilo de vida de cada cliente.",
     },
     {
       icon: Handshake,
-      title: "Comprissmo e Qualidade",
-      subtitle: "en d as kirssio de pessat",
+      title: "Excelência em Materiais e Execução",
+      subtitle: "Trabalhamos com padrões elevados de qualidade, processos rigorosos e acabamento impecável, garantindo durabilidade, precisão técnica e fidelidade absoluta ao projeto aprovado.",
     },
     {
       icon: Trees,
-      title: "Foilesiáldnirio as ellems peutersen de",
-      subtitle: "palete dig tirae Eliice",
+      title: "Experiência, Transparência e Confiança",
+      subtitle: "Oferecemos uma jornada completa, com atendimento próximo, prazos claros e acompanhamento em todas as etapas — do conceito à montagem final, com total segurança e tranquilidade.",
     },
   ];
 
@@ -71,9 +71,10 @@ const Projetos = () => {
         {/* Nossos Valores */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
-              NOSSOS VISĨÃ
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                NOSSA ESSÊNCIA
             </h2>
+            <p className="text-ls text-muted-foreground mb-12">Design autoral, precisão e confiança em cada detalhe.</p>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {valores.map((valor, index) => {
@@ -87,7 +88,6 @@ const Projetos = () => {
                       {valor.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">{valor.subtitle}</p>
-                    <p className="text-sm text-foreground mt-4">- Ana Clara</p>
                   </div>
                 );
               })}

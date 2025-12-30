@@ -37,9 +37,9 @@ const Contato = () => {
       
       <main id="content" className="flex-1">
         {/* Header */}
-        <section className="py-16 bg-background">
+        <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               FALE CONOSCO
             </h1>
           </div>
@@ -96,8 +96,7 @@ const Contato = () => {
                 </form>
 
                 <p className="text-sm text-muted-foreground mt-4">
-                  War etıp ute ststin le cde mss ps erecte dullwca pee csi ir qs tisnillas
-                  tiorsta roa ea er pultioet ctia tiaqia.
+                Seus dados estão seguros. Em breve, um especialista da Smart Design entrará em contato.
                 </p>
               </div>
 
@@ -106,8 +105,8 @@ const Contato = () => {
                 <div className="rounded-lg overflow-hidden h-96 mb-8 border">
                   <iframe
                     title="Mapa - Smart Design"
-                    src={"https://www.google.com/maps?q=" + encodeURIComponent("Rua Oitis Silvestres, lote 13, Qd. 26, bairro Jardim dos Ipês, Cuiabá MT") + "&output=embed"}
-                    width="100%"
+                    src={"https://www.google.com/maps?q=" + encodeURIComponent("Rua da Cereja, lote 190, bairro Bosque da Saúde, Cuiabá MT") + "&output=embed"}
+                    width="100%"                                                
                     height="100%"
                     style={{ border: 0 }}
                     loading="lazy"
@@ -147,7 +146,7 @@ const Contato = () => {
                     <div>
                       <div className="text-sm text-muted-foreground">Localizados:</div>
                       <p className="text-sm text-foreground">
-                        Rua Oitis Silvestres, lote 13, Qd. 26, bairro Jardim dos Ipês, Cuiabá MT
+                      Rua da Cereja, 190, Centro Comercial Nogueira, Sala 05, Bairro Bosque da Saúde - Cuiabá/MT
                       </p>
                     </div>
                     <div className="pt-2">
@@ -166,23 +165,13 @@ const Contato = () => {
                     </p>
                   </div>
 
-                  <div className="flex justify-center gap-4">
-                    <a href="#" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
+                  <div className="flex justify-center gap-4 mt-3">
+                    <a href="https://instagram.com/smartdesignplanejados" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
                       <Instagram className="h-5 w-5" />
                     </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Facebook className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Share2 className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Youtube className="h-5 w-5" />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Linkedin className="h-5 w-5" />
-                    </a>
                   </div>
+
+                  
                 </div>
               </div>
             </div>

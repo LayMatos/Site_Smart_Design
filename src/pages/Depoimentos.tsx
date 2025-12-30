@@ -5,33 +5,33 @@ import Footer from "@/components/Footer";
 const Depoimentos = () => {
   const depoimentos = [
     {
-      name: "Ana Clara",
-      comment: "Fui ou nore 50 nes de Dispiritieset.",
+      name: "Arquiteto parceiro",
+      comment: "Indiquei a Smart Design ao meu cliente com total confiança, e o resultado confirmou a escolha. A fidelidade ao projeto, a qualidade da execução e o cuidado na entrega fizeram toda a diferença. É uma empresa que entende o olhar do arquiteto e valoriza cada detalhe do projeto.",
       stars: 5,
     },
     {
       name: "Ana Clara",
-      comment: "Urea & repellz simasta de eleosre! eal",
+      comment: "Desde o primeiro atendimento até a entrega final, tudo foi conduzido com muito profissionalismo. O resultado superou nossas expectativas, tanto no design quanto no acabamento.",
       stars: 5,
     },
     {
       name: "Ana Clara",
-      comment: "Itos orm do coniennde terieis tio indrime beletol",
+      comment: "Os móveis foram entregues exatamente conforme o projeto aprovado. Qualidade impecável, montagem cuidadosa e atenção aos detalhes que realmente fazem a diferença.",
       stars: 5,
     },
     {
       name: "Ana Clara",
-      comment: "Oarres te endoliies ata moend tie nms e klat",
+      comment: "Ficamos impressionados com a organização do processo e o cumprimento dos prazos. A entrega foi tranquila e o resultado final valorizou muito o ambiente.",
       stars: 5,
     },
     {
       name: "Ana Clara",
-      comment: "Fue Design trensilide stipape potis ie arprovner klerm-Hannsells.",
+      comment: "É perceptível o padrão elevado dos materiais e do acabamento. A equipe foi extremamente cuidadosa durante a entrega e montagem. Recomendo sem hesitar.",
       stars: 5,
     },
     {
       name: "Ana Clara",
-      comment: "Yesi stess a calads de Horts stirre mid e nuns de cosmessize tetipe broges.",
+      comment: "A experiência foi excelente do início ao fim. A entrega ocorreu dentro do prazo combinado e os móveis ficaram ainda melhores do que imaginávamos.",
       stars: 5,
     },
   ];
@@ -42,9 +42,9 @@ const Depoimentos = () => {
       
       <main id="content" className="flex-1">
         {/* Header */}
-        <section className="py-16 bg-background">
+        <section className="py-9 bg-background">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
               O QUE DIZEM NOSSOS CLIENTES
             </h1>
           </div>
