@@ -1,70 +1,162 @@
-# Smart Design — Site institucional (React + TS + Vite)
+# Smart Design — Site Institucional
 
-Projeto em React + TypeScript usando Vite, TailwindCSS e componentes shadcn/ui. Inclui rotas, tema, ícones e páginas institucionais (Home, Quem Somos, Projetos, Depoimentos, Contato), além de página de detalhes de projeto.
+<p align="center">
+  <img src="src/assets/logo.png" alt="Smart Design" width="280" />
+</p>
 
-## Stack
-- React 18 + TypeScript
-- Vite 5 (plugin react-swc)
-- TailwindCSS 3 + tailwind-animate + tokens HSL (shadcn/ui)
-- React Router v6
-- Radix UI (base dos componentes), lucide-react (ícones)
-- TanStack Query (infra pronta para dados)
+Site institucional da **Smart Design | Marcenaria Moderna**, empresa especializada em móveis planejados de alto padrão para residências e empresas. O projeto apresenta os serviços, portfólio de projetos, depoimentos de clientes e canal de contato integrado ao WhatsApp.
 
-## Scripts
-- `npm run dev`: inicia o servidor em desenvolvimento
-- `npm run build`: build de produção
-- `npm run preview`: pré-visualização do build
-- `npm run lint`: lint dos arquivos
+## Sobre o projeto
 
-## Executando localmente
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Rode em desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-3. Acesse no navegador o endereço que o Vite indicar (por padrão http://localhost:8080).
+A Smart Design fabrica móveis sob medida com design personalizado, visualização 3D, acompanhamento em todas as etapas e entrega no prazo. Este site foi desenvolvido para transmitir a identidade da marca, destacar os diferenciais da empresa e facilitar o contato com potenciais clientes.
 
-## Estrutura principal
-- `src/components` — Navbar, Footer e componentes UI (shadcn/ui)
-- `src/pages` — páginas: `Home`, `QuemSomos`, `Projetos`, `ProjetoDetalhe`, `Depoimentos`, `Contato`, `NotFound`
-- `src/data/projects.ts` — base de projetos (slug, título, imagem, etc.)
-- `src/assets` — imagens e logotipos (logo do header e logotipo do favicon)
-- `index.html` — metatags e links de favicon
-- `tailwind.config.ts` — tokens de tema e plugins
-- `src/index.css` — variáveis HSL e camadas do Tailwind
-- `vite.config.ts` — alias `@` para `src` e plugin React SWC
+## Prints do site
 
-## Rotas
-- `/` — Home
-- `/quem-somos` — Quem Somos
-- `/projetos` — Lista de Projetos
-- `/projetos/:slug` — Detalhe do Projeto
-- `/depoimentos` — Depoimentos
-- `/contato` — Contato
+### Home
 
-## Favicon e Logotipo
-- Header utiliza `src/assets/logo.png` (ajuste em `src/components/Navbar.tsx`).
-- Favicon utiliza `public/favicon.ico` (e `public/favicon.png`) com versionamento de cache em `index.html`.
+Página inicial com hero, diferenciais da empresa e depoimentos em destaque.
 
-## Personalização rápida
-- Trocar cores: edite os tokens HSL em `src/index.css` (seção `:root`).
-- Tipografia/espacamentos: utilize as utilitárias do Tailwind diretamente nas páginas/componentes.
-- Ícones: importar de `lucide-react` e aplicar classes Tailwind.
+![Página inicial](docs/screenshots/home.png)
 
-## Padrões de UI/UX aplicados
-- Navbar com foco, skip‑link e responsividade (menu mobile).
-- Animações suaves (hover/foco) em cards e botões.
-- Layout responsivo com containers centralizados.
-- Página de detalhes de projeto com fallback 404.
+### Quem Somos
 
-## Build de produção
+História da empresa, conceito, valores e equipe.
+
+![Quem Somos](docs/screenshots/quem-somos.png)
+
+### Projetos
+
+Galeria dos projetos recentes com cards clicáveis para ver os detalhes.
+
+![Projetos](docs/screenshots/projetos.png)
+
+### Detalhe do Projeto
+
+Página individual de cada projeto com descrição, características e imagem em destaque.
+
+![Detalhe do Projeto](docs/screenshots/projeto-detalhe.png)
+
+### Depoimentos
+
+Avaliações e feedback de clientes e parceiros.
+
+![Depoimentos](docs/screenshots/depoimentos.png)
+
+### Contato
+
+Formulário de contato com integração ao WhatsApp, mapa e redes sociais.
+
+![Contato](docs/screenshots/contato.png)
+
+## Funcionalidades
+
+- Layout responsivo com menu mobile
+- Navegação por rotas (React Router)
+- Galeria de projetos com páginas de detalhe por slug
+- Formulário de contato que redireciona para o WhatsApp
+- Botões de orçamento com link direto para o WhatsApp
+- Animações suaves em cards, botões e seções
+- Navbar com skip-link para acessibilidade
+- Tema visual personalizado com tokens HSL (shadcn/ui)
+
+## Stack tecnológica
+
+| Tecnologia | Uso |
+|---|---|
+| React 18 | Interface e componentes |
+| TypeScript | Tipagem estática |
+| Vite 5 | Build e servidor de desenvolvimento |
+| Tailwind CSS 3 | Estilização utilitária |
+| shadcn/ui + Radix UI | Componentes acessíveis |
+| React Router v6 | Roteamento SPA |
+| TanStack Query | Infraestrutura para dados assíncronos |
+| Lucide React | Ícones |
+
+## Como executar
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) 18 ou superior
+- npm
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+cd Site_Smart_Design
+
+# Instale as dependências
+npm install
+```
+
+### Desenvolvimento
+
+```bash
+npm run dev
+```
+
+Acesse [http://localhost:8080](http://localhost:8080) no navegador.
+
+### Build de produção
+
 ```bash
 npm run build
 npm run preview
 ```
 
+### Lint
+
+```bash
+npm run lint
+```
+
+## Rotas
+
+| Rota | Página |
+|---|---|
+| `/` | Home |
+| `/quem-somos` | Quem Somos |
+| `/projetos` | Lista de Projetos |
+| `/projetos/:slug` | Detalhe do Projeto |
+| `/depoimentos` | Depoimentos |
+| `/contato` | Contato |
+
+## Estrutura do projeto
+
+```
+Site_Smart_Design/
+├── docs/
+│   └── screenshots/          # Prints do site para documentação
+├── public/                   # Favicon e arquivos estáticos
+├── src/
+│   ├── assets/               # Imagens, logo e fotos dos projetos
+│   ├── components/           # Navbar, Footer e componentes UI
+│   ├── data/
+│   │   └── projects.ts       # Base de dados dos projetos
+│   ├── hooks/                # Hooks customizados
+│   ├── pages/                # Páginas da aplicação
+│   ├── App.tsx               # Rotas principais
+│   ├── main.tsx              # Ponto de entrada
+│   └── index.css             # Variáveis de tema e estilos globais
+├── index.html
+├── tailwind.config.ts
+└── vite.config.ts
+```
+
+## Personalização
+
+- **Cores e tema:** edite os tokens HSL em `src/index.css` (seção `:root`)
+- **Projetos:** adicione ou edite entradas em `src/data/projects.ts`
+- **Logo:** substitua `src/assets/logo.png` (usado no header)
+- **Favicon:** substitua `public/favicon.ico` e `public/favicon.png`
+- **Contato WhatsApp:** número configurado em `src/pages/Contato.tsx` e `src/pages/Home.tsx`
+
+## Contato
+
+- **WhatsApp:** [(65) 99245-0630](https://wa.me/5565992450630)
+- **Instagram:** [@smartdesignplanejados](https://instagram.com/smartdesignplanejados)
+
 ## Licença
-Projeto privado para uso da Smart Design.
+
+Projeto privado para uso da Smart Design. Todos os direitos reservados.
